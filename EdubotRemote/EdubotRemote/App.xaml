@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<unity:PrismApplication
+    x:Class="EdubotRemote.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:unity="http://prismlibrary.com"
+    mc:Ignorable="d">
+    <Application.Resources>
+        <Color x:Key="Teal">#00979d</Color>
+        <Color x:Key="LightTeal">#6bbfc1</Color>
+        <Color x:Key="DarkTeal">#008184</Color>
+        <Color x:Key="Orange">#f39c12</Color>
+        <Color x:Key="DarkOrange">#d94900</Color>
+        <Color x:Key="Yellow">#f1c40f</Color>
+        <Color x:Key="Brown">#9e846d</Color>
+        <Color x:Key="LightBrown">#ebdcd6</Color>
+        <Color x:Key="LightGray">#e5e5e5</Color>
+
+        <Style TargetType="NavigationPage">
+            <Setter Property="HasNavigationBar" Value="True" />
+            <Setter Property="BarTextColor" Value="White" />
+            <Setter Property="BarBackgroundColor" Value="{StaticResource Key=DarkTeal}" />
+        </Style>
+        <OnPlatform
+            x:Key="FontAwesomeSolid"
+            x:TypeArguments="x:String"
+            Android="fa-solid-900.ttf#Font Awesome 5 Free Solid"
+            iOS="Font Awesome 5 Free Solid" />
+    </Application.Resources>
+</unity:PrismApplication>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EdubotRemote.Views.DashboardView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="{Binding LDRValue}"
+                TextColor="Black"
+                VerticalOptions="Center" />
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    Command="{Binding DirectionalCommand}"
+                    CommandParameter="w"
+                    HeightRequest="100"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="100">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource FontAwesomeSolid}"
+                            Glyph="{Binding ArrowCircleUp}"
+                            Size="25"
+                            Color="Black" />
+                    </ImageButton.Source>
+                </ImageButton>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal">
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        Command="{Binding DirectionalCommand}"
+                        CommandParameter="a"
+                        HeightRequest="100"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="100">
+                        <ImageButton.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource FontAwesomeSolid}"
+                                Glyph="{Binding ArrowCircleLeft}"
+                                Size="25"
+                                Color="Black" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        Command="{Binding DirectionalCommand}"
+                        CommandParameter="x"
+                        HeightRequest="100"
+                        WidthRequest="100">
+                        <ImageButton.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource FontAwesomeSolid}"
+                                Glyph="{Binding StopCircle}"
+                                Size="25"
+                                Color="Red" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                    <ImageButton
+                        BackgroundColor="Transparent"
+                        Command="{Binding DirectionalCommand}"
+                        CommandParameter="d"
+                        HeightRequest="100"
+                        WidthRequest="100">
+                        <ImageButton.Source>
+                            <FontImageSource
+                                FontFamily="{DynamicResource FontAwesomeSolid}"
+                                Glyph="{Binding ArrowCircleRight}"
+                                Size="25"
+                                Color="Black" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                </StackLayout>
+                <ImageButton
+                    Grid.Row="2"
+                    BackgroundColor="Transparent"
+                    Command="{Binding DirectionalCommand}"
+                    CommandParameter="s"
+                    HeightRequest="100"
+                    HorizontalOptions="Center"
+                    WidthRequest="100">
+                    <ImageButton.Source>
+                        <FontImageSource
+                            FontFamily="{DynamicResource FontAwesomeSolid}"
+                            Glyph="{Binding ArrowCircleDown}"
+                            Size="25"
+                            Color="Black" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

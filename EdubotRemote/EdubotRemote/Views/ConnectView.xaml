@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EdubotRemote.Views.ConnectView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ctrl="clr-namespace:EdubotRemote.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Scan for Edubot"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TapGestureRecognizerTappedCommand}" />
+            </Grid.GestureRecognizers>
+            <ctrl:CircleScanner x:Name="CircleScanner" IsActive="{Binding IsScanning, Mode=OneWay}" />
+            <Label
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="{Binding StatusText, Mode=OneWay}"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
