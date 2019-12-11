@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="255 255 255" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1920">
+<PageBlocks>
+<Block genus-name="if" id="228">
+<Location>
+<X>167</X>
+<Y>138</Y>
+</Location>
+<BeforeBlockId>224</BeforeBlockId>
+<AfterBlockId>239</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="229" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="233" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_print" id="239">
+<Location>
+<X>167</X>
+<Y>237</Y>
+</Location>
+<BeforeBlockId>228</BeforeBlockId>
+<AfterBlockId>242</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="240" connector-kind="socket" connector-type="string" init-type="string" label="MESSAGE" position-type="single"/>
+<BlockConnector con-block-id="241" connector-kind="socket" connector-type="boolean" init-type="boolean" label="new line" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_get_data" id="242">
+<Location>
+<X>167</X>
+<Y>291</Y>
+</Location>
+<BeforeBlockId>239</BeforeBlockId>
+<AfterBlockId>318</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="243" connector-kind="socket" connector-type="string" init-type="string" label="SENSOR" position-type="single"/>
+<BlockConnector con-block-id="244" connector-kind="socket" connector-type="boolean" init-type="boolean" label="new line" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="ifelse" id="318">
+<Location>
+<X>167</X>
+<Y>345</Y>
+</Location>
+<BeforeBlockId>242</BeforeBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="249" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="253" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+<BlockConnector con-block-id="319" connector-kind="socket" connector-type="cmd" init-type="cmd" label="else" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_motor" id="319">
+<Location>
+<X>267</X>
+<Y>1427</Y>
+</Location>
+<BeforeBlockId>318</BeforeBlockId>
+<AfterBlockId>322</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="320" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="321" connector-kind="socket" connector-type="number" init-type="number" label="SPEED" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_siren" id="322">
+<Location>
+<X>267</X>
+<Y>1481</Y>
+</Location>
+<BeforeBlockId>319</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="323" connector-kind="socket" connector-type="number" init-type="number" label="KBOT." position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_horn" id="323">
+<Location>
+<X>397</X>
+<Y>1484</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="322" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="321">
+<Label>0</Label>
+<Location>
+<X>397</X>
+<Y>1454</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="319" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor_stop" id="320">
+<Location>
+<X>397</X>
+<Y>1430</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="319" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="if" id="253">
+<Location>
+<X>268</X>
+<Y>381</Y>
+</Location>
+<BeforeBlockId>318</BeforeBlockId>
+<AfterBlockId>266</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="255" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="257" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="266">
+<Location>
+<X>268</X>
+<Y>588</Y>
+</Location>
+<BeforeBlockId>253</BeforeBlockId>
+<AfterBlockId>279</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="267" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="270" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="279">
+<Location>
+<X>268</X>
+<Y>795</Y>
+</Location>
+<BeforeBlockId>266</BeforeBlockId>
+<AfterBlockId>292</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="280" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="283" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="292">
+<Location>
+<X>268</X>
+<Y>1002</Y>
+</Location>
+<BeforeBlockId>279</BeforeBlockId>
+<AfterBlockId>305</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="293" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="296" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="305">
+<Location>
+<X>268</X>
+<Y>1209</Y>
+</Location>
+<BeforeBlockId>292</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="306" connector-kind="socket" connector-type="boolean" init-type="boolean" label="test" position-type="single"/>
+<BlockConnector con-block-id="309" connector-kind="socket" connector-type="cmd" init-type="cmd" label="then" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_motor" id="309">
+<Location>
+<X>333</X>
+<Y>1245</Y>
+</Location>
+<BeforeBlockId>305</BeforeBlockId>
+<AfterBlockId>312</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="310" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="311" connector-kind="socket" connector-type="number" init-type="number" label="SPEED" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="312">
+<Location>
+<X>333</X>
+<Y>1299</Y>
+</Location>
+<BeforeBlockId>309</BeforeBlockId>
+<AfterBlockId>315</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="313" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="314" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="315">
+<Location>
+<X>333</X>
+<Y>1353</Y>
+</Location>
+<BeforeBlockId>312</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="316" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="317" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_turnOFF" id="317">
+<Location>
+<X>449</X>
+<Y>1380</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="315" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpright" id="316">
+<Location>
+<X>449</X>
+<Y>1356</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="315" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_turnOFF" id="314">
+<Location>
+<X>449</X>
+<Y>1326</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="312" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpleft" id="313">
+<Location>
+<X>449</X>
+<Y>1302</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="312" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="311">
+<Label>0</Label>
+<Location>
+<X>463</X>
+<Y>1272</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="309" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor_stop" id="310">
+<Location>
+<X>463</X>
+<Y>1248</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="309" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal" id="306">
+<Location>
+<X>336</X>
+<Y>1212</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="305" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="307" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="332" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="332">
+<Label>120</Label>
+<Location>
+<X>494</X>
+<Y>1215</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="306" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_poly" id="307">
+<Label>INPUT_DATA</Label>
+<Location>
+<X>346</X>
+<Y>1215</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="306" connector-kind="plug" connector-type="number" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor" id="296">
+<Location>
+<X>333</X>
+<Y>1038</Y>
+</Location>
+<BeforeBlockId>292</BeforeBlockId>
+<AfterBlockId>299</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="297" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="298" connector-kind="socket" connector-type="number" init-type="number" label="SPEED" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="299">
+<Location>
+<X>333</X>
+<Y>1092</Y>
+</Location>
+<BeforeBlockId>296</BeforeBlockId>
+<AfterBlockId>302</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="300" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="301" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="302">
+<Location>
+<X>333</X>
+<Y>1146</Y>
+</Location>
+<BeforeBlockId>299</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="303" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="304" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_turnON" id="304">
+<Location>
+<X>449</X>
+<Y>1173</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="302" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpright" id="303">
+<Location>
+<X>449</X>
+<Y>1149</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="302" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_turnON" id="301">
+<Location>
+<X>449</X>
+<Y>1119</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="299" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpleft" id="300">
+<Location>
+<X>449</X>
+<Y>1095</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="299" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="298">
+<Label>255</Label>
+<Location>
+<X>463</X>
+<Y>1065</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="296" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor_reverse" id="297">
+<Location>
+<X>463</X>
+<Y>1041</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="296" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal" id="293">
+<Location>
+<X>336</X>
+<Y>1005</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="292" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="294" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="331" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="331">
+<Label>115</Label>
+<Location>
+<X>494</X>
+<Y>1008</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="293" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_poly" id="294">
+<Label>INPUT_DATA</Label>
+<Location>
+<X>346</X>
+<Y>1008</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="293" connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor" id="283">
+<Location>
+<X>333</X>
+<Y>831</Y>
+</Location>
+<BeforeBlockId>279</BeforeBlockId>
+<AfterBlockId>286</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="284" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="285" connector-kind="socket" connector-type="number" init-type="number" label="SPEED" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="286">
+<Location>
+<X>333</X>
+<Y>885</Y>
+</Location>
+<BeforeBlockId>283</BeforeBlockId>
+<AfterBlockId>289</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="287" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="288" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="289">
+<Location>
+<X>333</X>
+<Y>939</Y>
+</Location>
+<BeforeBlockId>286</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="290" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="291" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_turnON" id="291">
+<Location>
+<X>449</X>
+<Y>966</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="289" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpright" id="290">
+<Location>
+<X>449</X>
+<Y>942</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="289" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_turnOFF" id="288">
+<Location>
+<X>449</X>
+<Y>912</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="286" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpleft" id="287">
+<Location>
+<X>449</X>
+<Y>888</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="286" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="285">
+<Label>255</Label>
+<Location>
+<X>463</X>
+<Y>858</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="283" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor_turn_right" id="284">
+<Location>
+<X>463</X>
+<Y>834</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="283" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal" id="280">
+<Location>
+<X>336</X>
+<Y>798</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="279" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="281" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="327" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="327">
+<Label>100</Label>
+<Location>
+<X>494</X>
+<Y>801</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="280" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_poly" id="281">
+<Label>INPUT_DATA</Label>
+<Location>
+<X>346</X>
+<Y>801</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="280" connector-kind="plug" connector-type="number" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor" id="270">
+<Location>
+<X>333</X>
+<Y>624</Y>
+</Location>
+<BeforeBlockId>266</BeforeBlockId>
+<AfterBlockId>273</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="271" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="272" connector-kind="socket" connector-type="number" init-type="number" label="SPEED" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="273">
+<Location>
+<X>333</X>
+<Y>678</Y>
+</Location>
+<BeforeBlockId>270</BeforeBlockId>
+<AfterBlockId>276</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="274" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="275" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="276">
+<Location>
+<X>333</X>
+<Y>732</Y>
+</Location>
+<BeforeBlockId>273</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="277" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="278" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_turnOFF" id="278">
+<Location>
+<X>449</X>
+<Y>759</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="276" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpright" id="277">
+<Location>
+<X>449</X>
+<Y>735</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="276" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_turnON" id="275">
+<Location>
+<X>449</X>
+<Y>705</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="273" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpleft" id="274">
+<Location>
+<X>449</X>
+<Y>681</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="273" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="272">
+<Label>255</Label>
+<Location>
+<X>463</X>
+<Y>651</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="270" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor_turn_left" id="271">
+<Location>
+<X>463</X>
+<Y>627</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="270" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal" id="267">
+<Location>
+<X>336</X>
+<Y>591</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="266" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="268" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="326" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="326">
+<Label>97</Label>
+<Location>
+<X>494</X>
+<Y>594</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="267" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_poly" id="268">
+<Label>INPUT_DATA</Label>
+<Location>
+<X>346</X>
+<Y>594</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="267" connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor" id="257">
+<Location>
+<X>333</X>
+<Y>417</Y>
+</Location>
+<BeforeBlockId>253</BeforeBlockId>
+<AfterBlockId>260</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="258" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="259" connector-kind="socket" connector-type="number" init-type="number" label="SPEED" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="260">
+<Location>
+<X>333</X>
+<Y>471</Y>
+</Location>
+<BeforeBlockId>257</BeforeBlockId>
+<AfterBlockId>263</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="261" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="262" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_led" id="263">
+<Location>
+<X>333</X>
+<Y>525</Y>
+</Location>
+<BeforeBlockId>260</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="264" connector-kind="socket" connector-type="boolean" init-type="boolean" label="KBOT." position-type="single"/>
+<BlockConnector con-block-id="265" connector-kind="socket" connector-type="boolean" init-type="boolean" label="MODE" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_turnON" id="265">
+<Location>
+<X>449</X>
+<Y>552</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="263" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpright" id="264">
+<Location>
+<X>449</X>
+<Y>528</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="263" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_turnON" id="262">
+<Location>
+<X>449</X>
+<Y>498</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="260" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_fpleft" id="261">
+<Location>
+<X>449</X>
+<Y>474</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="260" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="259">
+<Label>255</Label>
+<Location>
+<X>463</X>
+<Y>444</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="257" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_motor_fwd" id="258">
+<Location>
+<X>463</X>
+<Y>420</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="257" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal" id="255">
+<Location>
+<X>336</X>
+<Y>384</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="253" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="254" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="325" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="325">
+<Label>119</Label>
+<Location>
+<X>494</X>
+<Y>387</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="255" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_poly" id="254">
+<Label>INPUT_DATA</Label>
+<Location>
+<X>346</X>
+<Y>387</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="255" connector-kind="plug" connector-type="number" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="less" id="249">
+<Location>
+<X>271</X>
+<Y>348</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="318" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="250" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="252" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="252">
+<Label>800</Label>
+<Location>
+<X>558</X>
+<Y>351</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="249" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_sensor" id="250">
+<Location>
+<X>281</X>
+<Y>351</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="249" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="251" connector-kind="socket" connector-type="number" init-type="number" label="KBOT." position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_ldr" id="251">
+<Location>
+<X>425</X>
+<Y>351</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="250" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="true" id="244">
+<Label>true</Label>
+<Location>
+<X>301</X>
+<Y>318</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="242" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_sn" id="243">
+<Location>
+<X>301</X>
+<Y>294</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="242" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="245" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_sensor" id="245">
+<Location>
+<X>357</X>
+<Y>294</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="243" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="246" connector-kind="socket" connector-type="number" init-type="number" label="KBOT." position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="kbot_ldr" id="246">
+<Location>
+<X>501</X>
+<Y>294</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="245" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="false" id="241">
+<Location>
+<X>329</X>
+<Y>264</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="239" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="message" id="240">
+<Label>LDR =</Label>
+<Location>
+<X>329</X>
+<Y>240</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="239" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="setter_variable_char" id="233">
+<Location>
+<X>232</X>
+<Y>174</Y>
+</Location>
+<BeforeBlockId>228</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="236" connector-kind="socket" connector-type="number" init-type="poly" label="variable" position-type="single"/>
+<BlockConnector con-block-id="238" connector-kind="socket" connector-type="number" init-type="poly" label="char" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="serial_read" id="238">
+<Location>
+<X>430</X>
+<Y>201</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="233" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_poly" id="236">
+<Label>INPUT_DATA</Label>
+<Location>
+<X>430</X>
+<Y>177</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="233" connector-kind="plug" connector-type="number" init-type="poly" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="greater" id="229">
+<Location>
+<X>235</X>
+<Y>141</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="228" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="231" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+<BlockConnector con-block-id="232" connector-kind="socket" connector-type="number" init-type="number" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="232">
+<Label>0</Label>
+<Location>
+<X>464</X>
+<Y>144</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="229" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="serial_available2" id="231">
+<Location>
+<X>245</X>
+<Y>144</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="229" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="kbot_begin" id="224">
+<Location>
+<X>167</X>
+<Y>108</Y>
+</Location>
+<BeforeBlockId>222</BeforeBlockId>
+<AfterBlockId>228</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector connector-kind="socket" connector-type="number" init-type="number" label="SET KBOT BEGIN" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="loop" id="222">
+<Location>
+<X>100</X>
+<Y>100</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="224" connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
