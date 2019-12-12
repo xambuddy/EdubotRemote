@@ -20,24 +20,21 @@
                 VerticalOptions="Center" />
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100" />
-                    <RowDefinition Height="100" />
-                    <RowDefinition Height="100" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <ImageButton
                     BackgroundColor="Transparent"
                     Command="{Binding DirectionalCommand}"
                     CommandParameter="w"
-                    HeightRequest="100"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand"
-                    WidthRequest="100">
+                    HorizontalOptions="Center">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource FontAwesomeSolid}"
                             Glyph="{Binding ArrowCircleUp}"
-                            Size="25"
-                            Color="Black" />
+                            Size="90"
+                            Color="{Binding ArrowCircleUpColor}" />
                     </ImageButton.Source>
                 </ImageButton>
                 <StackLayout
@@ -48,44 +45,39 @@
                         BackgroundColor="Transparent"
                         Command="{Binding DirectionalCommand}"
                         CommandParameter="a"
-                        HeightRequest="100"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="CenterAndExpand"
-                        WidthRequest="100">
+                        HorizontalOptions="Center">
                         <ImageButton.Source>
                             <FontImageSource
                                 FontFamily="{DynamicResource FontAwesomeSolid}"
                                 Glyph="{Binding ArrowCircleLeft}"
-                                Size="25"
-                                Color="Black" />
+                                Size="90"
+                                Color="{Binding ArrowCircleLeftColor}" />
                         </ImageButton.Source>
                     </ImageButton>
                     <ImageButton
                         BackgroundColor="Transparent"
                         Command="{Binding DirectionalCommand}"
                         CommandParameter="x"
-                        HeightRequest="100"
-                        WidthRequest="100">
+                        HorizontalOptions="Center">
                         <ImageButton.Source>
                             <FontImageSource
                                 FontFamily="{DynamicResource FontAwesomeSolid}"
                                 Glyph="{Binding StopCircle}"
-                                Size="25"
-                                Color="Red" />
+                                Size="90"
+                                Color="{Binding StopCircleColor}" />
                         </ImageButton.Source>
                     </ImageButton>
                     <ImageButton
                         BackgroundColor="Transparent"
                         Command="{Binding DirectionalCommand}"
                         CommandParameter="d"
-                        HeightRequest="100"
-                        WidthRequest="100">
+                        HorizontalOptions="Center">
                         <ImageButton.Source>
                             <FontImageSource
                                 FontFamily="{DynamicResource FontAwesomeSolid}"
                                 Glyph="{Binding ArrowCircleRight}"
-                                Size="25"
-                                Color="Black" />
+                                Size="90"
+                                Color="{Binding ArrowCircleRightColor}" />
                         </ImageButton.Source>
                     </ImageButton>
                 </StackLayout>
@@ -94,15 +86,13 @@
                     BackgroundColor="Transparent"
                     Command="{Binding DirectionalCommand}"
                     CommandParameter="s"
-                    HeightRequest="100"
-                    HorizontalOptions="Center"
-                    WidthRequest="100">
+                    HorizontalOptions="Center">
                     <ImageButton.Source>
                         <FontImageSource
                             FontFamily="{DynamicResource FontAwesomeSolid}"
                             Glyph="{Binding ArrowCircleDown}"
-                            Size="25"
-                            Color="Black" />
+                            Size="90"
+                            Color="{Binding ArrowCircleDownColor}" />
                     </ImageButton.Source>
                 </ImageButton>
             </Grid>

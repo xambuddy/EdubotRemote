@@ -1,6 +1,4 @@
 ﻿using Plugin.BLE.Abstractions.Contracts;
-using Plugin.BLE.Abstractions.EventArgs;
-using Prism;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
@@ -8,7 +6,6 @@ using System;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using Unity;
 using Xamarin.Forms;
 
 namespace EdubotRemote.ViewModels
@@ -18,29 +15,25 @@ namespace EdubotRemote.ViewModels
         private IAdapter _btAdapter;
         private IDevice _btDevice;
         private ICharacteristic _characteristic;
-
-        public string LDRValue { get; set; }
-
-        public ICommand DirectionalCommand => new DelegateCommand<string>(async (val) => await SendDataAsync(val));
-
+        private string _selectedCommand;
 
         public DashboardViewModel(IAdapter btAdapter)
         {
             _btAdapter = btAdapter;
         }
 
-        private async Task SendDataAsync(string value)
-        {
-            await _characteristic?.WriteAsync(Encoding.ASCII.GetBytes(value));
-        }
-
-        public string ArrowCircleUp => "\uf0aa";
-        public string ArrowCircleLeft => "\uf0a8";
-        public string ArrowCircleRight => "\uf0a9";
         public string ArrowCircleDown => "\uf0ab";
+        public Color ArrowCircleDownColor => GetColor("s");
+        public string ArrowCircleLeft => "\uf0a8";
+        public Color ArrowCircleLeftColor => GetColor("a");
+        public string ArrowCircleRight => "\uf0a9";
+        public Color ArrowCircleRightColor => GetColor("d");
+        public string ArrowCircleUp => "\uf0aa";
+        public Color ArrowCircleUpColor => GetColor("w");
+        public ICommand DirectionalCommand => new DelegateCommand<string>(async (val) => await SendDataAsync(val));
+        public string LDRValue { get; set; }
         public string StopCircle => "\uf28d";
-
-        EventHandler<CharacteristicUpdatedEventArgs> valueUpdatedHandler;
+        public Color StopCircleColor => GetColor("x");
 
         public async Task ConnectToDeviceAsync(IDevice bleDevice)
         {
@@ -68,6 +61,27 @@ namespace EdubotRemote.ViewModels
         {
             _btDevice = parameters["Device"] as IDevice;
             ConnectToDeviceAsync(_btDevice);
+        }
+
+        private Color GetColor(string command)
+        {
+            return command == _selectedCommand ? Color.Red : Color.Black;
+        }
+        private async Task SendDataAsync(string value)
+        {
+            await _characteristic?.WriteAsync(Encoding.ASCII.GetBytes(value));
+
+            _selectedCommand = value;
+            UpdateControlColors();
+        }
+
+        private void UpdateControlColors()
+        {
+            RaisePropertyChanged(nameof(ArrowCircleDownColor));
+            RaisePropertyChanged(nameof(ArrowCircleUpColor));
+            RaisePropertyChanged(nameof(ArrowCircleLeftColor));
+            RaisePropertyChanged(nameof(ArrowCircleRightColor));
+            RaisePropertyChanged(nameof(StopCircleColor));
         }
     }
 }
